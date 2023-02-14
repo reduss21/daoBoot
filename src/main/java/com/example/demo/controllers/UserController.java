@@ -23,7 +23,7 @@ public class UserController {
         return "table";
     }
 
-    @RequestMapping("/addNewUser")
+    @PatchMapping("/addNewUser")
     public String addNewUser(Model model) {
         User user = new User();
         model.addAttribute("user", user);
@@ -42,7 +42,7 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping("/update/{id}")
+    @PatchMapping("/update/{id}")
     public String updateUser(@PathVariable("id") long id, Model model) {
         User user = userService.getUserById(id);
         model.addAttribute("user", user);

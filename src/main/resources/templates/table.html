@@ -23,7 +23,7 @@
         <td th:utext="${user.getEmail()}">Lastname</td>
         <td th:utext="${user.getAge()}">Age</td>
         <td>
-            <form th:method="GET" th:action="'update/' + ${user.getId()}">
+            <form th:method="PATCH" th:action="'update/' + ${user.getId()}">
                 <input type="submit" class="buttonEdit" value="Update"/>
             </form>
 
