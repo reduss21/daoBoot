@@ -23,7 +23,7 @@ public class UserController {
         return "table";
     }
 
-    @PatchMapping("/addNewUser")
+    @PostMapping("/addNewUser")
     public String addNewUser(Model model) {
         User user = new User();
         model.addAttribute("user", user);

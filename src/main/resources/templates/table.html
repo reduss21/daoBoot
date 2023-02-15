@@ -27,7 +27,7 @@
                 <input type="submit" class="buttonEdit" value="Update"/>
             </form>
 
-            <form th:method="GET" th:action="'delete/' + ${user.getId()}">
+            <form th:method="DELETE" th:action="'delete/' + ${user.getId()}">
                 <input type="submit" class="buttonDelete" value="Delete"/>
             </form>
         </td>
